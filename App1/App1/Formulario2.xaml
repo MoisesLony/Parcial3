@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Formulario2">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Image Source="Loginpage.jpg" Aspect="AspectFill"/>
+                <BoxView Color="#da9aea" Opacity="0.8"/>
+                <Grid>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+
+                    </Grid.RowDefinitions>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Formulario 2"  HorizontalOptions="CenterAndExpand"  FontAttributes="Bold" FontSize="Title" TextDecorations="Underline" TextColor="Black"/>
+                    </StackLayout>
+                    <StackLayout Grid.Row=" 1" Padding="30,20">
+            <Entry  Placeholder="Estado Familiar"  MaxLength="10" Keyboard="Text" x:Name="txtName">
+                <Entry.Triggers>
+                    <Trigger TargetType="Entry"
+                             Property="Text"
+                             Value=""
+                             >
+                        <Setter Property="BackgroundColor"
+                                Value="LightCoral">
+
+                        </Setter>
+                    </Trigger>
+                </Entry.Triggers>
+            </Entry>
+            <Label Text="Casado, soltero o divorciado" TextColor="Black" FontSize="Subtitle" FontAttributes="Bold"/>
+                        <StackLayout Grid.Row=" 1" Padding="30,20">
+                            <Entry  Placeholder="Numero de Dui" Keyboard="Numeric" x:Name="txtDUI">
+
+
+            </Entry>
+
+            <Label Text="" x:Name="lbl" TextColor="Red"/>
+
+
+
+            <Button x:Name="F2" Text="Completar" Clicked="F2_Clicked"/>
+                        </StackLayout>
+                    </StackLayout>
+                    </Grid>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

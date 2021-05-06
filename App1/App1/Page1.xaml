@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Page1">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Image Source="Loginpage.jpg" Aspect="AspectFill"/>
+                <BoxView Color="#da9aea" Opacity="0.8"/>
+                <Grid>
+                    
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+
+                    </Grid.RowDefinitions>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Formulario 1"  HorizontalOptions="CenterAndExpand"  FontAttributes="Bold" FontSize="Title" TextDecorations="Underline" TextColor="Black"/>
+                    </StackLayout>
+                    <StackLayout Grid.Row=" 1" Padding="30,20">
+            <Entry  Placeholder="Edad"  MaxLength="3" Keyboard="Numeric">
+                <Entry.Triggers>
+                    <Trigger TargetType="Entry"
+                             Property="Text"
+                             Value=""
+                             >
+                        <Setter Property="BackgroundColor"
+                                Value="LightCoral">
+
+                        </Setter>
+                    </Trigger>
+                </Entry.Triggers>
+            </Entry>
+                        <StackLayout Grid.Row=" 1" Padding="30,20">
+                            <Entry  Placeholder="Sexo"  TextChanged="txtsexo_TextChanged" x:Name="txtSexo" MaxLength="2">
+                
+
+               </Entry>
+            <Label Text="" x:Name="lbl" TextColor="Red">
+                
+            </Label>
+            <Label Text="M o F" TextColor="Black"/>
+            <Button x:Name="F1" Text="Completar" Clicked="F1_Clicked"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Grid>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

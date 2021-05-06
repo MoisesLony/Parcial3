@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Home">
+    <ContentPage.Content>
+        <StackLayout>
+        <Grid>
+            <Image Source="Loginpage.jpg" Aspect="AspectFill"/>
+            <BoxView Color="#da9aea" Opacity="0.8"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+
+                </Grid.RowDefinitions>
+                    <Image Grid.Row="0" Source="Logoapp.png" WidthRequest="100" HeightRequest="100" Margin="0,50,0,30"/>
+
+
+
+
+                </Grid>
+        </Grid>
+        
+        <Button Clicked="Button_Clicked" Text="Formulario 1" BackgroundColor="White" BorderRadius="20" TextColor="#da9aea" />
+        <Button Clicked="Button_Clicked_1" Text="Formulario 2" BackgroundColor="White" BorderRadius="20" TextColor="#da9aea" />
+        <Button Clicked="Button_Clicked_2" Text="Formulario 3" BackgroundColor="White" BorderRadius="20" TextColor="#da9aea" />
+        <Button Clicked="Button_Clicked_3" Text="Formulario 4" BackgroundColor="White" BorderRadius="20" TextColor="#da9aea" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Formulario3">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Image Source="Loginpage.jpg" Aspect="AspectFill"/>
+                <BoxView Color="#da9aea" Opacity="0.8"/>
+                <Grid>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+
+                    </Grid.RowDefinitions>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Formulario 3"  HorizontalOptions="CenterAndExpand"  FontAttributes="Bold" FontSize="Title" TextDecorations="Underline" TextColor="Black"/>
+                    </StackLayout>
+                    <StackLayout Grid.Row=" 1" Padding="30,20">
+                        <Entry  Placeholder="Tipo de sangre" MaxLength="9" x:Name="txtsangre">
+                            <Entry.Triggers>
+                                <Trigger TargetType="Entry"
+                             Property="Text"
+                             Value=""
+                             >
+                                    <Setter Property="BackgroundColor"
+                                Value="LightCoral">
+
+                                    </Setter>
+                                </Trigger>
+                            </Entry.Triggers>
+                        </Entry>
+                        <Label Text="" x:Name="lbl" TextColor="Red"/>
+
+                        <Button x:Name="F3" Text="Completar" Clicked="F3_Clicked"/>
+                    </StackLayout>
+                </Grid>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
